@@ -1,5 +1,6 @@
 package com.afrikatek.tacocloud.domain;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import lombok.Data;
@@ -14,5 +15,9 @@ public class TacoOrder {
 	private String ccNumber;
 	private String ccExpiration;
 	private String ccCVV;
-	private List<Taco> tacos;
+	private List<Taco> tacos = new ArrayList<>();
+	
+	public void addTaco(Taco taco) {
+		this.tacos.add(taco);
+	}
 }
